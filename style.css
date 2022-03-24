@@ -1,0 +1,143 @@
+html {
+  min-width: 320px;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  background-color: black;
+  width: 100%;
+  color: white;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  margin: 0 10px;
+  align-items: center;
+  align-content: center;
+}
+
+nav {
+  width: 70%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item,
+.footer-link {
+  text-decoration: none;
+  transition: color 0.5s;
+  list-style-type: none;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-item.is-active{
+  color:#bdae42
+}
+
+.bird:hover,
+.bird.is-active,
+.nav-item:hover,
+.footer-link:hover,
+.play:hover,
+.logo:hover {
+  filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+  transition: 1s;
+}
+
+.bird {
+  background-image: url(./assets/svg/logo.svg);
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.nav-item:hover{
+  box-shadow: 0 0.5em 0.5em -0.4em #bdae82;
+  transform: translatey(0.5em);
+  transition: 0,8s;
+}
+
+.bird:hover{
+  transform: translate(150px, 0);
+  transition: cubic-bezier(0, 1.18, 0.99, 0.01);
+  transition: 3s;
+}
+
+main {
+  background-image: url(./assets/img/forest.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+}
+
+main.forest{
+  background-image: url(./assets/img/forest.jpg);
+}
+
+main.drozd{
+  background-image: url(./assets/img/drozd.jpg);
+}
+main.javoronok{
+  background-image: url(./assets/img/javoronok.jpg);
+}
+main.slavka{
+  background-image: url(./assets/img/slavka.jpg);
+}
+main.solovey{
+  background-image: url(./assets/img/solovey.jpg);
+}
+main.zarynka{
+  background-image: url(./assets/img/zarynka.jpg);
+}
+
+
+.play {
+  background-image: url(./assets/svg/play.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 160px;
+  height: 160px;
+  cursor: pointer;
+  transition: 0.9s;
+}
+
+.play.is-active {
+  background-image: url(./assets/svg/pause.svg);
+  transition: 0.9s;
+}
+
+.footer-data {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 15%;
+}
+
+.footer-item {
+  justify-content: flex-end;
+}
+
+.footer-link > img {
+  width: 135px;
+  height: 50px;
+}
